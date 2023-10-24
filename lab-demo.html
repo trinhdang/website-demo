@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<!--HEAD--->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Lab Demo</title>
+	<link rel="stylesheet" href="styles.css" type="text/css">	
+
+</head>
+
+<!--BODY--->
+<body>
+	<nav>	
+        <!--CURTAIN MENU ICON-->    
+        <p class="menu-icon-style" onclick="openNav()">&#9776;MENU</p>  
+        <p class="menu-tagline-style">WELCOME TO WEB TECHNOLOGIES</p>           			
+	</nav>	
+
+    <!--CURTAIN MENU LAYER-->   
+    <div id="myNav" class="overlay">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <div class="overlay-content">
+        <a href="index.html">HOME</a>
+        <a href="page2.html">CONTACT US</a>
+        <a href="page3.html">ABOUT US</a>
+        <a href="page4.html">GALLERY</a>
+      </div>
+    </div>  
+	
+    <script>
+        function openNav() {
+          document.getElementById("myNav").style.display = "block";/*Show curtain menu*/         
+        }
+
+        function closeNav() {
+          document.getElementById("myNav").style.display = "none";/*Hide the curtain menu*/
+        }
+    </script>
+
+	
+	<header>		
+		<h4 id="auto-slide-title">The Shawshank Redemption</h4>
+		<img id="auto-slide-image" src="images/movie0.jpg" height="90%">              			  	
+	</header>
+	
+	<main> 
+		<!--Add a section contains a manual slideshow-->
+        <section class="slideshow-section">
+            <h2 id="manual-slide-title">The Shawshank Redemption</h2>
+            <img id="manual-slide-image" src="images/movie0.jpg" height="70%">
+            <h3 id="manual-slide-year">1994</h3>
+            <br>
+            <button onclick="previousSlide()">PREVIOUS</button>
+            <button onclick="nextSlide()">NEXT</button>     
+        </section>
+		
+		<!--Add an empty section to display 3 articles-->
+		<section id="article-section"> </section>
+
+    <!--Add a long article-->
+		<section class="long-article">
+      <h2>Title: "Lorem Ipsum"</h2>
+      <img src="https://www.typingpal.com/images/1/3/a/8/4/13a845e178cb05ecc149ffc850ad9a6eac19f85d-lorem-ipsum.png" 
+          alt="Image" width="300px">
+      <p id="abstract">Summary: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."<br>
+        "There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."
+      </p>
+      <p id="detailed">Detailed: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse semper magna id nibh finibus, ultrices molestie tellus venenatis. Curabitur gravida, tortor sit amet molestie consectetur, tortor tortor dictum leo, nec imperdiet neque leo id felis. Duis laoreet, massa in pharetra tempor, lectus turpis venenatis dui, a dictum lacus mi at diam. Cras at eros consectetur ligula dapibus viverra. Pellentesque imperdiet lectus tellus. Pellentesque faucibus diam ac venenatis dictum. Suspendisse scelerisque ultricies lacinia. Integer tristique ipsum nec sagittis porttitor. Quisque ac lacinia massa. Mauris augue augue, iaculis non facilisis ac, fermentum eu magna. Integer mattis ultrices luctus. Proin semper pellentesque eros, vel pretium lacus cursus at. Aliquam fringilla nulla vel pellentesque egestas. Nunc sed elit aliquet nisl aliquet tristique. Mauris accumsan eros at augue rutrum, quis cursus turpis elementum. Duis arcu quam, posuere at nulla et, luctus malesuada nibh.<br>
+        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec at egestas leo. Maecenas varius malesuada metus, at malesuada massa vulputate et. Ut sit amet est eu sem vestibulum interdum quis ac est. Praesent ipsum nunc, elementum nec convallis et, fermentum eget nunc. Nullam cursus fermentum varius. Duis quis rutrum nisi, in condimentum magna. Cras tristique erat at fermentum tempor. Aenean convallis justo molestie arcu imperdiet venenatis. Sed eget massa rutrum, condimentum elit nec, lobortis magna. Curabitur non maximus mauris. Phasellus ac auctor purus. Phasellus a dignissim elit, nec semper nisi.
+      </p>
+      <button id="expandBtn" onclick="expandText()" value="hide">READ MORE</button>            
+		</section>
+
+    <!--Blurred background image-->
+    <section class="blurred-background">
+      <!--background image-->
+      <div class="bg-image">
+      </div>
+      <!--Text on background image-->
+      <div class="bg-text">
+        <h2>Blurred Background</h2>
+        <h1 style="font-size: 3em">I am Daniel DANG</h1>
+        <p>And I'm a Website Developer</p>
+      </div>
+    </section>
+
+    <!--Dropdowm menu using Select tag-->
+    <section class="dropdown-item-menu">
+      <h2>DROPDOWN MENU TO SELECT A MOVIE TO SHOW</h2>
+      <label>Select Movie: </label>
+      <!--Dropdown menu-->
+      <select id="my-movieList" onchange="displayMyMovie()"></select>
+      <!--display selected movie here-->
+      <div id="movie-card"></div>
+    </section>
+
+    <!--Display items in grid (row x column) format-->
+    <section class="grid-of-items">
+      <!--Search box-->
+      <h1>SEARCH</h1>
+      <label>Keyword:</label>
+      <input type="text" id="searchInput">
+      <input type="button" value="search" onclick="displayFiltedItems()">	
+      <br>
+        
+      <!--Dropdown menu for category-->
+      <h1>CATEGORY</h1>
+      <label for="cars">Choose a category:</label>
+      <select id="categorySelect" onchange="displaySelectedCategory()">
+        <option value="">ALL</option>
+        <option value="A">Category A</option>
+        <option value="B">Category B</option>
+        <option value="C">Category C</option>
+      </select>
+  
+      <!--An empty grid of items-->
+      <h1 class="text-style-center">DISPLAY ITEMS IN GRID</h1>	
+      <div id="item-list"></div>
+    </section>
+
+
+
+
+	</main>
+	
+	<footer>
+		<p>WEBSITE DEVELOPMENT <br> created by Daniel Dang
+		</p>
+	</footer>
+	
+	<script src="javascript.js"></script>	
+</body>
+</html>

@@ -1,0 +1,337 @@
+/*MOBILE FIRST APPROACH:
+  Every styles below is for SMALL DEVICES (smartphones)
+  screen width <= 425px
+*/
+body {
+	background-color: white;
+	font-family: "Times New Roman", serif;
+}
+
+* {/*star symbol means all HTML tags*/
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/*-----------------------*/
+nav {
+	min-height: 5vh;
+	background-image: linear-gradient(to right, red , yellow, green);	
+	/*Flex box*/
+	display: flex;
+	flex-direction: row;
+}
+
+.menu-icon-style {
+	flex: 1;	
+	font-size: 2.0em;
+    cursor: pointer;
+}
+
+.menu-tagline-style {
+    flex: 9; 	
+	font-size: 2.0em;
+    text-align: center;
+}
+
+/*Curtain Menu Layer Style*/
+.overlay {
+	height: 100%;
+	width: 70%;
+	display: none;/* "none": hide; "block": show*/
+	position: fixed;
+	z-index: 1;/*on top of all the other elements/layers*/
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0, 0.9);
+}
+
+.overlay-content {
+	position: relative;
+	top: 25%;
+	width: 100%;
+	text-align: center;
+	margin-top: 2.0em;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 1.2em;
+  right: 3.0em;
+  font-size: 4.0em;
+}
+
+.overlay a {
+    font-size: 2.0em;
+}
+.overlay .closebtn {
+    font-size: 3.0em;
+    top: 1.0em;
+    right: 2.2em;
+}
+
+
+
+/*---*/
+header {
+	height: 50vh;
+	background-color: white;
+	text-align: center;
+}
+
+/*---*/
+main {
+	min-height: 60vh;
+	background-color: gray;
+}
+
+main section {
+	text-align: center;
+}
+
+.slideshow-section {
+    height: 60vh;
+    background-color: pink; 
+}
+
+main section button {
+    padding: 1.5em;
+	margin: 1.0em;
+	width: 130px;
+    border: 2px solid black;
+	background-color: orange;
+}
+
+
+/*Articles section*/
+#article-section {
+  min-height: 50vh;  
+  text-align: center;
+}
+
+.article-style {
+  width: 90%;
+  display: inline-block;
+  background-color: white;
+  border: solid 2px black;
+  margin: 1.0em;  
+}
+
+.content-box {
+  /*Set box size*/
+  width: 90%;
+  height: 200px;
+  border: 1px solid #000;
+  margin: 1em;
+  overflow: scroll;
+  
+  line-height: 1.4;
+  letter-spacing: 2px;  
+  padding: 0.5em;
+}
+
+.read-more-btn {
+  background-color: orange;
+  padding: 1.5em;
+  margin: 1em;
+}
+
+/*Long article*/
+.long-article {
+	background-color: beige;
+}
+
+#abstract {
+	color: blue;
+	letter-spacing: 1px;
+	line-height: 1.4;
+}
+  
+#detailed {
+	color: black;
+	letter-spacing: 1px;
+	line-height: 1.4;  
+}
+  
+#expandBtn {
+	padding: 1.5em;
+	background-color: orange;
+	cursor: pointer;
+}
+
+/*Blurred background image*/
+.blurred-background {
+	width: 100%;
+	height: 50vh;
+	position: relative;
+}
+
+.bg-image {
+	/* The image used */
+	background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/JavaScript_code.png/300px-JavaScript_code.png");
+	
+	/* Add the blur effect */
+	filter: blur(4px);
+	
+	/* Full height */
+	height: 100%; 
+	
+	/* Center and scale the image nicely */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+  
+  /* Position text in the middle of the page/image */
+  .bg-text {
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+	color: white;
+	font-weight: bold;
+	border: 3px solid #f1f1f1;
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+	width: 80%;
+	padding: 20px;
+	text-align: center;
+}
+
+/*-------*/
+/*Dropdown item menu*/
+.dropdown-item-menu {
+	background-color: cornsilk;
+	text-align: left;
+	padding: 2em;
+}
+
+.movie-image-style {
+	display: block;
+	height: 200px;
+}
+
+/*---------*/
+/*Grid of items*/
+.grid-of-items {
+	display: block;
+	text-align: left;
+	background-color: burlywood;
+}
+
+#item-list {
+	display: grid;
+	grid-template-columns: 1fr;/*1 column*/
+	background-color: #2196F3;
+	padding: 0.5px;
+	margin: 0.5em;  
+}
+  
+.item-card {
+	display: inline-block;
+	background-color: pink;
+	padding: 0.5em;
+	margin: 0.2em;
+  }
+  
+.text-style-center {
+  text-align: center;
+}
+  
+.image-style {
+	display: block; 
+	height: 150px; 
+	margin-left: auto; 
+	margin-right: auto;
+}
+  
+.add-button-style {
+	margin: 0.5em;
+	padding: 1em;
+	background-color: orange;
+	cursor: pointer;  
+}
+
+
+
+
+  
+
+/*----------------------------*/
+footer {
+	height: 10vh;
+	background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgba(255,0,0,1));
+	
+	/*Centralize the content both vertically and horizontally*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+footer p {
+	font-size: 1.2em;
+	font-weight: bold;
+	text-align: center;
+}
+
+
+
+
+
+
+
+/*------------------------*/
+/*Styles changes for MEDIUM DEVICES: iPads or Tablets
+  screen width: 426 px -> 768px 
+*/
+@media only screen and (min-width: 426px) {
+	body {
+		background-color: pink;
+	}
+	
+	.article-style {
+		width: 45%;
+	}
+
+	#item-list {
+		display: grid;
+		grid-template-columns: 1fr 1fr;/*2 columns*/
+	} 
+	
+}
+
+
+
+/*------------------------*/
+/*Styles changes for BIG DEVICES: PC or desktops
+  screen width: >= 769px 
+*/
+@media only screen and (min-width: 769px) {
+	body {
+		background-color: lightblue;
+	}
+
+	.article-style {
+		width: 30%;
+	}	
+
+	#item-list {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;/*3 columns*/
+	  }
+	
+}
